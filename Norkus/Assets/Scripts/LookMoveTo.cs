@@ -43,4 +43,15 @@ public class LookMoveTo : MonoBehaviour
             _miCC.SimpleMove(_forward * speed);
         }
     }
+
+    public void PowerUp(){
+        StartCoroutine(IncreaseSpeed());
+    }
+
+    IEnumerator IncreaseSpeed(){
+        speed = 8;
+        yield return new WaitForSeconds(10);
+        speed = 5;
+    }
+
 }
