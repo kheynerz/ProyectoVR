@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class CameraPointerManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    private const float _maxDistance = 20;
+    [SerializeField] private float _maxDistance = 15;
     private GameObject _gazedAtObject = null;
 
     [SerializeField] private GameObject pointer;
@@ -16,14 +16,19 @@ public class CameraPointerManager : MonoBehaviour
     {
         GazeManager.Instance.OnGazeSelection += GazeSelection;
 
-        prefixes.Add("SC", "ChangeScene");
+        //Interactables in Menu
+        prefixes.Add("CS", "ChangeScene");
+        prefixes.Add("EX", "ExitApp");
+
+
+        prefixes.Add("ZB", "KillZombie");
         
     }
 
     private void GazeSelection()
     {
-        if (!_gazedAtObject.CompareTag(interactableTag)) return;
-
+        if (!_gazedAtObject.CompareTag(interactableTag) && !_gazedAtObject.CompareTag("InteractableMenu")) return;
+       
         string value = "";
         if (prefixes.TryGetValue(_gazedAtObject.name.Substring(0,2), out value)){
             _gazedAtObject?.SendMessage(value, null, SendMessageOptions.DontRequireReceiver);
@@ -38,23 +43,32 @@ public class CameraPointerManager : MonoBehaviour
     {
         // Casts ray towards camera's forward direction, to detect if a GameObject is being gazed
         // at.
+
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {   
             // GameObject detected in front of the camera.
             if (_gazedAtObject != hit.transform.gameObject)
             {
-                //_gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
+               
+                if (_gazedAtObject?.tag == "Interactable"){
+                    _gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
+
+                }
                 _gazedAtObject = hit.transform.gameObject;
-               // _gazedAtObject.SendMessage("OnPointerEnter", null, SendMessageOptions.DontRequireReceiver);
-                if (hit.transform.CompareTag(interactableTag))
+                if (_gazedAtObject?.tag == "Interactable"){
+                    _gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
+                }
+                if (hit.transform.CompareTag(interactableTag) || hit.transform.CompareTag("InteractableMenu"))
                     GazeManager.Instance.StartGazeSelection();
             }
         }
         else
         {
             GazeManager.Instance.CancelGazeSelection();
-            //_gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
+            if (_gazedAtObject?.tag == "Interactable"){
+                _gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
+            }
             _gazedAtObject = null;
         }
     }

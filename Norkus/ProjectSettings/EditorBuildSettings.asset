@@ -5,21 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MoverObjetos.unity
-    guid: fc63948cb7d964d41a0ab55d0fd5a878
-  - enabled: 1
-    path: Assets/Scenes/MenuPrincipal.unity
-    guid: ea73187bba0478b4288127a535b27bf0
-  - enabled: 1
-    path: Assets/Scenes/MirarCaminar.unity
-    guid: 4c6d2c88dc1494244a33acebd947ecd3
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/Navegar.unity
-    guid: 173638bd523a4704c9e49914f25c5780
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f78c66666ee848f41a0c24144daebecd,
       type: 2}
