@@ -11,11 +11,16 @@ public class DirectInteractions : MonoBehaviour
     {
         //Posible direct Interactions
         prefixes.Add("ZB", "HitPlayer");
-        
     }
 
     void OnTriggerEnter(Collider other) {
         if (other.tag == "Dead") return;
+
+        if (other.name.Substring(0,2) == "PU"){
+            gameObject?.SendMessage("PowerUp",null, SendMessageOptions.DontRequireReceiver);
+            return;
+        }
+
         string value = "";
         if (prefixes.TryGetValue(other.name.Substring(0,2), out value)){
             other?.SendMessage(value, null, SendMessageOptions.DontRequireReceiver);

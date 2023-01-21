@@ -10,7 +10,7 @@ public class ZombieAI : MonoBehaviour
     private Animator zombieAnim;
     private bool acceptedDistance = false;
     private bool canMove = true;
-    [SerializeField] private AudioSource death;
+    private AudioSource shotSound;
     [SerializeField] private AudioSource attack;
 
     public float timeToKill = 2;
@@ -20,6 +20,7 @@ public class ZombieAI : MonoBehaviour
     void Awake()
     {
         target = GameObject.FindWithTag("Player").transform;
+        shotSound = target.GetChild(0).GetChild(3).GetComponent<AudioSource>();
         GazeManager = target.GetChild(0).GetChild(0);
         joints = gameObject.transform.GetChild(0);
     }
@@ -58,7 +59,7 @@ public class ZombieAI : MonoBehaviour
     public void KillZombie(){
         canMove = false;
         zombieAnim.Play("Death");
-        death.Play();
+        shotSound.Play();
         gameObject.tag = "Dead";
         StartCoroutine(DestroyGameObject());
     }
