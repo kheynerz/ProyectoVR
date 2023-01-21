@@ -5,10 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interactable
-  - Teleporting
-  - Ground
-  - Grab
-  - UnGrab
+  - Dead
   layers:
   - Default
   - TransparentFX
