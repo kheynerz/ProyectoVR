@@ -19,7 +19,8 @@ public class CameraPointerManager : MonoBehaviour
         //Interactables in Menu
         prefixes.Add("CS", "ChangeScene");
         prefixes.Add("EX", "ExitApp");
-
+        prefixes.Add("VU", "VolumeUp");
+        prefixes.Add("VD", "VolumeDown");
 
         prefixes.Add("ZB", "KillZombie");
         
