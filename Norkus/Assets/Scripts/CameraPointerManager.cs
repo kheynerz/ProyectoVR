@@ -27,7 +27,7 @@ public class CameraPointerManager : MonoBehaviour
 
     private void GazeSelection()
     {
-        if (!_gazedAtObject.CompareTag(interactableTag) && !_gazedAtObject.CompareTag("InteractableMenu")) return;
+        if (!_gazedAtObject.CompareTag(interactableTag)) return;
        
         string value = "";
         if (prefixes.TryGetValue(_gazedAtObject.name.Substring(0,2), out value)){
@@ -51,25 +51,24 @@ public class CameraPointerManager : MonoBehaviour
             if (_gazedAtObject != hit.transform.gameObject)
             {
                
-                if (_gazedAtObject?.tag == "Interactable"){
-                    _gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
-
-                }
+                _gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
                 _gazedAtObject = hit.transform.gameObject;
-                if (_gazedAtObject?.tag == "Interactable"){
-                    _gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
-                }
-                if (hit.transform.CompareTag(interactableTag) || hit.transform.CompareTag("InteractableMenu"))
+                _gazedAtObject?.SendMessage("OnPointerEnter", null, SendMessageOptions.DontRequireReceiver);
+                if (hit.transform.CompareTag(interactableTag))
                     GazeManager.Instance.StartGazeSelection();
             }
         }
         else
         {
             GazeManager.Instance.CancelGazeSelection();
-            if (_gazedAtObject?.tag == "Interactable"){
-                _gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
-            }
+            _gazedAtObject?.SendMessage("OnPointerExit", null, SendMessageOptions.DontRequireReceiver);
             _gazedAtObject = null;
         }
     }
 }
+
+/*
+RIGID 
+ZOMBIE MOVEMENT SOUND
+
+*/

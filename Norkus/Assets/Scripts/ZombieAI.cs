@@ -6,29 +6,40 @@ public class ZombieAI : MonoBehaviour
 {
     // Adjust the speed for the application.
     public float speed = 1.0f;
+    public int visionDistance = 20;
     private Transform target;
+    private Transform player;
     private Animator zombieAnim;
     private bool acceptedDistance = false;
     private bool canMove = true;
     private AudioSource shotSound;
     [SerializeField] private AudioSource attack;
 
+    [SerializeField] private AudioSource walkSound;
+    
+    [SerializeField] private AudioSource groan;
+
     public float timeToKill = 2;
     private Transform GazeManager; 
 
     private Transform joints;
+
+    private Rigidbody rigid;
+
     void Awake()
     {
-        target = GameObject.FindWithTag("Player").transform;
-        shotSound = target.GetChild(0).GetChild(3).GetComponent<AudioSource>();
-        GazeManager = target.GetChild(0).GetChild(0);
+        player = GameObject.FindWithTag("Player").transform;
+        shotSound = player.GetChild(0).GetChild(3).GetComponent<AudioSource>();
+        GazeManager = player.GetChild(0).GetChild(0);
         joints = gameObject.transform.GetChild(0);
+        target = player.GetChild(0).GetChild(4);
     }
 
 
     void Start()
     {
         zombieAnim = transform.GetChild(0).GetComponent<Animator>();
+        rigid = transform.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -39,13 +50,17 @@ public class ZombieAI : MonoBehaviour
         var step =  speed * Time.deltaTime; 
         var distance = Mathf.Sqrt(Mathf.Pow(transform.position.x - target.position.x,2) + Mathf.Pow(transform.position.y - target.position.y,2) + Mathf.Pow(transform.position.z - target.position.z,2));
         
-        if (distance >= 20){
+        if (distance >= visionDistance){
             zombieAnim.Play("Idle_Look");
             acceptedDistance = false;
+            walkSound.Stop();
         }else{
             if(!acceptedDistance){
                 zombieAnim.Play("Run");
+                groan.Play();
                 acceptedDistance = true;
+                walkSound.loop = true;
+                walkSound.Play();
             }
         }
         if (acceptedDistance){
@@ -61,6 +76,8 @@ public class ZombieAI : MonoBehaviour
         zombieAnim.Play("Death");
         shotSound.Play();
         gameObject.tag = "Dead";
+        walkSound.Stop();
+        groan.Stop();
         StartCoroutine(DestroyGameObject());
     }
 
@@ -68,7 +85,7 @@ public class ZombieAI : MonoBehaviour
         canMove = false;
         zombieAnim.Play("Attack1");
         attack.Play();
-        target?.SendMessage("KillPlayer", null, SendMessageOptions.DontRequireReceiver);
+        player?.SendMessage("KillPlayer", null, SendMessageOptions.DontRequireReceiver);
     }
 
     public void OnPointerEnter(){
@@ -79,7 +96,10 @@ public class ZombieAI : MonoBehaviour
     }
 
     IEnumerator DestroyGameObject(){
-        yield return new WaitForSeconds(5);
+        rigid.useGravity = true;
+        yield return new WaitForSeconds(3);
+        rigid.useGravity = false;
+        rigid.isKinematic = true;
         //Destroy(gameObject);
     }
 

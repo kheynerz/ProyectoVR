@@ -15,9 +15,9 @@ public class DirectInteractions : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         if (other.tag == "Dead") return;
-
         if (other.name.Substring(0,2) == "PU"){
             gameObject?.SendMessage("PowerUp",null, SendMessageOptions.DontRequireReceiver);
+            other?.SendMessage("DestroyPowerUp",null, SendMessageOptions.DontRequireReceiver);
             return;
         }
 
@@ -28,7 +28,7 @@ public class DirectInteractions : MonoBehaviour
     }
 
     public void KillPlayer(){
-        Debug.Log("KILLED");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

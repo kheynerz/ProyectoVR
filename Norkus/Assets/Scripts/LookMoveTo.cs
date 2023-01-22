@@ -13,6 +13,9 @@ public class LookMoveTo : MonoBehaviour
 
     private CharacterController _miCC;
 
+    [SerializeField] private AudioSource increaseSpeed;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,6 @@ public class LookMoveTo : MonoBehaviour
     void Update()
     {
         Mover();
-        
     }
 
     void Mover()
@@ -45,13 +47,15 @@ public class LookMoveTo : MonoBehaviour
     }
 
     public void PowerUp(){
+        increaseSpeed.Play();
         StartCoroutine(IncreaseSpeed());
     }
 
     IEnumerator IncreaseSpeed(){
-        speed = 8;
+        float tmpSpeed = speed;
+        speed *= 2;
         yield return new WaitForSeconds(10);
-        speed = 5;
+        speed = tmpSpeed;
     }
 
 }
