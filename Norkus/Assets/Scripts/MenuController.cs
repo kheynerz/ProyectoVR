@@ -30,10 +30,6 @@ public class MenuController : MonoBehaviour
     }
 
     //For the gaze to not crash
-    public void OnPointerEnter(){
-        Debug.Log("EnterPointer");
-    }
-    public void OnPointerExit(){
-        Debug.Log("ExitPointer");
-    }
+    public void OnPointerEnter(){}
+    public void OnPointerExit(){}
 }

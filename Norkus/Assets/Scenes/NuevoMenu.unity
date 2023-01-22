@@ -12683,7 +12683,7 @@ GameObject:
   - component: {fileID: 662413300}
   m_Layer: 5
   m_Name: VU MasSonido
-  m_TagString: InteractableMenu
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16853,7 +16853,7 @@ GameObject:
   - component: {fileID: 879007443}
   m_Layer: 5
   m_Name: VD  MenosSonido
-  m_TagString: InteractableMenu
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43235,7 +43235,7 @@ GameObject:
   - component: {fileID: 6672898510682515280}
   m_Layer: 5
   m_Name: EX Fin
-  m_TagString: InteractableMenu
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43392,7 +43392,7 @@ GameObject:
   - component: {fileID: 6672898510713433999}
   m_Layer: 5
   m_Name: CS AcercaDe
-  m_TagString: InteractableMenu
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43710,7 +43710,7 @@ GameObject:
   - component: {fileID: 6672898510998288095}
   m_Layer: 5
   m_Name: CS Empezar
-  m_TagString: InteractableMenu
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
