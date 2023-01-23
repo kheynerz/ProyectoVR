@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<<< HEAD:Norkus/Assets/Assets/EmaceArt/Slavic World Free/URP_Support/URP/URP_Standard.unitypackage.meta
 guid: d884527f3e242c144af52b11faf49d2f
 DefaultImporter:
@@ -6,6 +7,10 @@ DefaultImporter:
 guid: aae2f4f5249262247b1173d7273df88c
 PrefabImporter:
 >>>>>>>> f18639aecc5740ab6881a43a3bd7a10adbd83030:Norkus/Assets/Prefabs/Soundtrack.prefab.meta
+=======
+guid: aae2f4f5249262247b1173d7273df88c
+PrefabImporter:
+>>>>>>> f18639aecc5740ab6881a43a3bd7a10adbd83030
   externalObjects: {}
   userData: 
   assetBundleName: 
