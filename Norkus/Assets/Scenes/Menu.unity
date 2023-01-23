@@ -43430,7 +43430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e61382198ea52f43882e47f7b6a8be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 2
+  sceneBuildIndex: 8
   soundtrack: {fileID: 0}
 --- !u!224 &6672898510766064516
 RectTransform:
