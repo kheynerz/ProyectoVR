@@ -1,4 +1,4 @@
-%YAML 1.1
+S%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!162 &1
 EditorUserSettings:
@@ -17,8 +17,11 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-3:
       value: 0709045557020b025557087a46205a4414154f722f7e736474284460e6b8646a
       flags: 0
-    RecentlyUsedSceneGuid-4:
+    RecentlyUsedSceneGuid-3:
       value: 01570d0252035e5f0c580f7340740b44474f4f7d2d7e2067782d196abab33160
+      flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 5503570556560d0e08575d7648720e444f4f4b7b797a76657b7b4c65e6b96c3e
       flags: 0
     RecentlyUsedSceneGuid-5:
       value: 55055657000c5a58080b5d7746745b441315492b2e7977337a794437b5e16d61

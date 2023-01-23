@@ -23,8 +23,12 @@ public class GameController : MonoBehaviour
     public void CheckKills()
     {
         this.kills += 1;
-        if (this.kills == killsRequired)
+        if (this.kills == killsRequired){
+            GameObject[] soundtracks = GameObject.FindGameObjectsWithTag("Music");
+            foreach (GameObject soundtrack in soundtracks){
+                Destroy(soundtrack);
+            } 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+        }
     }
 }

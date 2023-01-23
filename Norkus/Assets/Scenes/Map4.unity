@@ -6336,6 +6336,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: PU PowerUP
       objectReference: {fileID: 0}
+    - target: {fileID: 2964401214987644078, guid: 7610fa54e68990d43aa42fef9276c6b4,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6365085
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964401214987644078, guid: 7610fa54e68990d43aa42fef9276c6b4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.04102569
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964401214987644078, guid: 7610fa54e68990d43aa42fef9276c6b4,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.15006162
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964401214987644078, guid: 7610fa54e68990d43aa42fef9276c6b4,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.06868541
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7610fa54e68990d43aa42fef9276c6b4, type: 3}
 --- !u!4 &681029875 stripped
