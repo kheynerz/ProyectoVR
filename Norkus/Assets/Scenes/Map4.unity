@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.040745974, g: 0.050543424, b: 0.08338426, a: 1}
+  m_IndirectSpecularColor: {r: 0.040906344, g: 0.050122365, b: 0.08569992, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6335,6 +6335,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PU PowerUP
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964401214987644078, guid: 7610fa54e68990d43aa42fef9276c6b4,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6365085
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964401214987644078, guid: 7610fa54e68990d43aa42fef9276c6b4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.04102569
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964401214987644078, guid: 7610fa54e68990d43aa42fef9276c6b4,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.15006162
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964401214987644078, guid: 7610fa54e68990d43aa42fef9276c6b4,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.06868541
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7610fa54e68990d43aa42fef9276c6b4, type: 3}
