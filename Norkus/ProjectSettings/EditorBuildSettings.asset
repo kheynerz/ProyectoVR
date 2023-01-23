@@ -24,8 +24,26 @@ EditorBuildSettings:
     path: Assets/Scenes/NuevoMenu.unity
     guid: 800e0bc0a9fb7ed4084b6c567bb3abdd
   - enabled: 1
+    path: Assets/Scenes/Map6.unity
+    guid: bf9d767da6c107441877a6f75dd983e8
+  - enabled: 1
+    path: Assets/Scenes/Mapa1M.unity
+    guid: 11c61ccc33740ed40b4fc300606fc67d
+  - enabled: 1
     path: Assets/Scenes/Mapa2M.unity
     guid: e1cd89c8cc00a554cb96bab54f8019f1
+  - enabled: 1
+    path: Assets/Scenes/Map7.unity
+    guid: 033d27ef62b86c347bef82d4bb52513b
+  - enabled: 1
+    path: Assets/Scenes/Map5.unity
+    guid: bfb3e16f54ee9c54a93d46fb77faf01e
+  - enabled: 1
+    path: Assets/Scenes/MapS2.unity
+    guid: 62cc3cd5e9148114983152056216d98f
+  - enabled: 1
+    path: Assets/Scenes/MapS1.unity
+    guid: 64b1e93cee1567d4eb1ab11c709d7a99
   - enabled: 1
     path: Assets/Scenes/About.unity
     guid: 5ff0d87de7ea0464ca5b1e9f070c976e

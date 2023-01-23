@@ -25,6 +25,7 @@ public class ZombieAI : MonoBehaviour
     private Transform joints;
 
     private Rigidbody rigid;
+ 
 
     void Awake()
     {
@@ -79,6 +80,8 @@ public class ZombieAI : MonoBehaviour
         walkSound.Stop();
         groan.Stop();
         StartCoroutine(DestroyGameObject());
+
+        player.SendMessage("CheckKills", null, SendMessageOptions.DontRequireReceiver);
     }
 
     public void HitPlayer(){
