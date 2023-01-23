@@ -9,6 +9,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private int sceneBuildIndex;
     [SerializeField] private AudioSource soundtrack;
 
+    [SerializeField] private int character;
     public void ChangeScene(){
         SceneManager.LoadScene(sceneBuildIndex);
     }
@@ -28,6 +29,11 @@ public class MenuController : MonoBehaviour
         #endif
         Application.Quit();
     }
+
+    public void ChangeCharacter(){
+        PlayerPrefs.SetInt("player", character);
+    }
+
 
     //For the gaze to not crash
     public void OnPointerEnter(){}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ZombieAI : MonoBehaviour
 {
     // Adjust the speed for the application.
@@ -19,6 +20,13 @@ public class ZombieAI : MonoBehaviour
     
     [SerializeField] private AudioSource groan;
 
+    
+/*    [SerializeField] private GameObject AK;
+    
+    [SerializeField] private GameObject SN;
+    
+    [SerializeField] private GameObject BA;*/
+
     public float timeToKill = 2;
     private Transform GazeManager; 
 
@@ -26,14 +34,14 @@ public class ZombieAI : MonoBehaviour
 
     private Rigidbody rigid;
  
-
     void Awake()
     {
         player = GameObject.FindWithTag("Player").transform;
-        shotSound = player.GetChild(0).GetChild(3).GetComponent<AudioSource>();
+
         GazeManager = player.GetChild(0).GetChild(0);
         joints = gameObject.transform.GetChild(0);
-        target = player.GetChild(0).GetChild(4);
+        target = player.GetChild(0).GetChild(2);
+
     }
 
 
@@ -41,6 +49,7 @@ public class ZombieAI : MonoBehaviour
     {
         zombieAnim = transform.GetChild(0).GetComponent<Animator>();
         rigid = transform.GetComponent<Rigidbody>();
+        shotSound = player.GetChild(0).GetChild(2 + PlayerPrefs.GetInt("player", 1)).GetComponent<AudioSource>();
     }
 
     void Update()
@@ -106,5 +115,4 @@ public class ZombieAI : MonoBehaviour
         //Destroy(gameObject);
     }
 
-    
 }

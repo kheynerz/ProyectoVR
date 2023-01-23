@@ -3030,37 +3030,6 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 124111171}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &913595003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5783972189638793799, guid: cec4496cf7c11634b8ccd59db4d333cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1936261259}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &913595008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913595003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e08367f59bdd05a45baf7ec121d97f4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &913595009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913595003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7080b101e8c412d4ab653d5d74ab04dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  killsRequired: 14
 --- !u!1001 &922058476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3560,12 +3529,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4646414992655530, guid: 5da07da6c25a65249aa4f03d5ed92684,
     type: 3}
   m_PrefabInstance: {fileID: 1069096293}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1099605125 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6452327887963425804, guid: cec4496cf7c11634b8ccd59db4d333cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1936261259}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1100060496
 PrefabInstance:
@@ -5975,7 +5938,7 @@ PrefabInstance:
         type: 3}
       propertyPath: aud
       value: 
-      objectReference: {fileID: 1099605125}
+      objectReference: {fileID: 0}
     - target: {fileID: 5783972189638793797, guid: cec4496cf7c11634b8ccd59db4d333cd,
         type: 3}
       propertyPath: vrPlayer
@@ -5985,6 +5948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerVRWalk-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009265709444359384, guid: cec4496cf7c11634b8ccd59db4d333cd,
+        type: 3}
+      propertyPath: killsRequired
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cec4496cf7c11634b8ccd59db4d333cd, type: 3}

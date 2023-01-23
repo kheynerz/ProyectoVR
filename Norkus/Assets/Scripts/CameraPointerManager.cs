@@ -21,7 +21,7 @@ public class CameraPointerManager : MonoBehaviour
         prefixes.Add("EX", "ExitApp");
         prefixes.Add("VU", "VolumeUp");
         prefixes.Add("VD", "VolumeDown");
-
+        prefixes.Add("CH", "ChangeCharacter");
         prefixes.Add("ZB", "KillZombie");
         
     }

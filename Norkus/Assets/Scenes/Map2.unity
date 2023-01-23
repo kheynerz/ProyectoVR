@@ -8515,7 +8515,7 @@ PrefabInstance:
         type: 3}
       propertyPath: aud
       value: 
-      objectReference: {fileID: 911905160}
+      objectReference: {fileID: 0}
     - target: {fileID: 5783972189638793797, guid: cec4496cf7c11634b8ccd59db4d333cd,
         type: 3}
       propertyPath: vrPlayer
@@ -8526,51 +8526,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerVRWalk-1
       objectReference: {fileID: 0}
+    - target: {fileID: 9009265709444359384, guid: cec4496cf7c11634b8ccd59db4d333cd,
+        type: 3}
+      propertyPath: killsRequired
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cec4496cf7c11634b8ccd59db4d333cd, type: 3}
---- !u!1 &911905158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5783972189638793799, guid: cec4496cf7c11634b8ccd59db4d333cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 911905157}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &911905159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7441305649569854158, guid: cec4496cf7c11634b8ccd59db4d333cd,
     type: 3}
   m_PrefabInstance: {fileID: 911905157}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &911905160 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6452327887963425804, guid: cec4496cf7c11634b8ccd59db4d333cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 911905157}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &911905161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911905158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e08367f59bdd05a45baf7ec121d97f4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &911905162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911905158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7080b101e8c412d4ab653d5d74ab04dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  killsRequired: 5
 --- !u!1001 &911917840
 PrefabInstance:
   m_ObjectHideFlags: 0
